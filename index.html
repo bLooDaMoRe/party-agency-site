@@ -6,7 +6,6 @@
   <title>Party Agency Links</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
     body {
       margin: 0;
       height: 100vh;
@@ -23,20 +22,66 @@
       position: relative;
     }
 
-    .logo {
-      width: 250px;
-      height: 250px;
-      margin-bottom: 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-    }
-
-    .logo img {
+    /* Конфети анимация */
+    .confetti {
+      position: fixed;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .confetti div {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      opacity: 0.8;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      border-radius: 3px;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Лого */
+    .logo {
+  width: 350px;
+  height: 350px;
+  /* махаме background-color и border-radius */
+  background-color: transparent;
+  border-radius: 0;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 26px;
+  color: #7873f5;
+  user-select: none;
+  z-index: 1;
+  box-shadow: none;
+}
+
+
+    h1 {
+      margin-bottom: 35px;
+      font-weight: 700;
+      font-size: 32px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1;
     }
 
     .links {
@@ -70,62 +115,31 @@
     }
 
     .link-btn img {
-      width: 32px;
-      height: 32px;
+      width: 56px;
+      height: 56px;
       object-fit: contain;
       flex-shrink: 0;
-    }
-
-    .confetti {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      top: 0;
-      left: 0;
-      z-index: 0;
-    }
-
-    .confetti div {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background-color: white;
-      opacity: 0.8;
-      animation-name: fall;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      border-radius: 3px;
-    }
-
-    @keyframes fall {
-      0% {
-        transform: translateY(-20px) rotate(0deg);
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
     }
   </style>
 </head>
 <body>
 
   <div class="logo">
-    <img src="logo.png" alt="Лого" />
-  </div>
+  <img src="logo.png" alt="Лого" style="width: 100%; height: 100%; border-radius: 50%;" />
+</div>
+
 
   <div class="links">
-    <a href="https://facebook.com/yourpage" target="_blank" class="link-btn" rel="noopener noreferrer">
-      <img src="facebook.png" alt="Facebook" />
-      Facebook
-    </a>
-    <a href="https://instagram.com/yourprofile" target="_blank" class="link-btn" rel="noopener noreferrer">
+  <a href="https://facebook.com/61556797032609/" target="_blank" class="link-btn" rel="noopener noreferrer">
+  <img src="facebook.png" alt="Facebook" />
+  Facebook
+</a>
+
+    <a href="https://www.instagram.com/veseliya.s.kameliya" target="_blank" class="link-btn" rel="noopener noreferrer">
       <img src="instagram.png" alt="Instagram" />
       Instagram
     </a>
-    <a href="https://tiktok.com/@yourprofile" target="_blank" class="link-btn" rel="noopener noreferrer">
+    <a href="https://www.tiktok.com/@veseliya.s.kameliya" target="_blank" class="link-btn" rel="noopener noreferrer">
       <img src="tiktok.png" alt="TikTok" />
       TikTok
     </a>
